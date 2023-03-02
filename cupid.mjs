@@ -23,7 +23,7 @@ async function main ({ OPENAI_API_KEY, DISCORD_API_KEY, DISCORD_CHANNEL_ID }) {
 
   while (true) {
     const message = await getMessage({ OPENAI_API_KEY })
-    if (message.match(/\[.*\]/)) continue /* dismiss messages with placeholders */
+    if (message.match(/[[(].*[)\]]/)) continue /* dismiss messages with placeholders */
     await sendMessage({ DISCORD_API_KEY, DISCORD_CHANNEL_ID }, message)
     break
   }
