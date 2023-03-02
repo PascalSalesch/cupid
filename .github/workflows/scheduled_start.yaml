@@ -1,0 +1,23 @@
+name: "Send discord message"
+
+on:
+  schedule:
+    # At 10:16.
+    - cron:  '16 10 * * *'
+
+jobs:
+  send:
+    name: Discord Message
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+        cache: 'npm'
+    - run: npm ci
+    - run: npm start
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        DISCORD_API_KEY: ${{ secrets.DISCORD_API_KEY }}
+        DISCORD_CHANNEL_ID: ${{ secrets.DISCORD_CHANNEL_ID }}

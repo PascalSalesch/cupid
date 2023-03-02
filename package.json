@@ -1,0 +1,15 @@
+{
+  "name": "@pascalsalesch/cupid",
+  "version": "1.0.0",
+  "description": "Using the OpenAI API and Discord API, this application sends customized messages to my girlfriend to brighten up her day.",
+  "main": "cupid.mjs",
+  "scripts": {
+    "start": "node cupid.mjs",
+    "test": "echo \"Warning: no test specified\" && exit 0"
+  },
+  "keywords": ["discord", "openai", "chatgpt"],
+  "author": "Pascal Salesch",
+  "license": "UNLICENSED",
+  "dependencies": {
+  }
+}
