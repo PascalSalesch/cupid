@@ -3,7 +3,7 @@ name: "Send discord message"
 on:
   schedule:
     # At 11:16 UTC.
-    - cron:  '16 11 * * *'
+    # - cron:  '16 11 * * *'
 
 jobs:
   send:
